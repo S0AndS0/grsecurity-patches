@@ -18,5 +18,5 @@ do
 
 	gpg --verify ${URL}.sig ${URL}
 done
-mv changelog-test.txt changelog-test.txt.old
-wget -c http://grsecurity.net/changelog-test.txt
+#mv changelog-test.txt changelog-test.txt.old
+#wget -c http://grsecurity.net/changelog-test.txt
