@@ -58,3 +58,12 @@ if $dopush; then
 else
 	echo "Nothing new to push"
 fi
+
+echo
+for p in $(tail pax_patches/paxlog.txt); do
+	lastpax=$p
+	[ -f pax_patches/$p ] && continue
+echo "PaX patch not in git:   $p"
+done
+
+echo "Last PaX:               $p"
