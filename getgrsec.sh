@@ -1,5 +1,7 @@
 #!/bin/sh
 
+RL=256k
+
 [ -d grsecurity_patches ] && cd grsecurity_patches
 
 wget -c -O - "https://grsecurity.net/test.php" |
@@ -13,8 +15,8 @@ wget -c -O - "https://grsecurity.net/test.php" |
 while read URL
 do
 	echo ${URL}
-	wget -nc "http://grsecurity.net/${URL}"
-	wget -nc "http://grsecurity.net/${URL}".sig
+	wget --limit-rate=$RL -nc "http://grsecurity.net/${URL}"
+	wget --limit-rate=$RL -nc "http://grsecurity.net/${URL}".sig
 
 	gpg --verify ${URL}.sig ${URL}
 done
