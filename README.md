@@ -1,3 +1,5 @@
+**Current status: no more updates of the testing patches, from 2017-04-26 on (read https://grsecurity.net/passing_the_baton.php and https://grsecurity.net/passing_the_baton_faq.php)**
+
 Yet another collection of the public *grsecurity.net* patches. For needs of
 [openSUSE-gardened](https://github.com/kdave/openSUSE-gardened).
 
