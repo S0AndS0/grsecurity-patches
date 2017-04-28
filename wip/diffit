@@ -1,0 +1,3 @@
+#!/bin/sh
+
+diff -u -I '^From ' -I '^Subject:' -I '^index' -I '^@@' "$1" "$2"
