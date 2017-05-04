@@ -41,6 +41,11 @@ add_new() {
 				git add "$i"
 				commit_to_git "$i"
 				;;
+			wip/*.patch)
+				echo "Grsec patch: $i"
+				git add "$i" "$i.sig"
+				commit_to_git "$i"
+				;;
 			*) #echo "IGNORED: $i"
 				: ;;
 		esac
