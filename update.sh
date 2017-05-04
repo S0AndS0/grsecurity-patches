@@ -54,8 +54,8 @@ add_new() {
 
 ###############
 
-./getgrsec.sh
-./getpax.sh
+# ./getgrsec.sh
+# ./getpax.sh
 add_new
 
 if $dopush; then
