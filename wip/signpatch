@@ -1,0 +1,9 @@
+#!/bin/sh
+
+key=C565D5F9D76D583B
+
+if [ -z "$1" ]; then
+	echo "Usage: $0 patch"
+	exit 1
+fi
+gpg --sign --detach --local-user "$key" "$1"
